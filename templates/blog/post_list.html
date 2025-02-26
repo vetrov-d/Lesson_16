@@ -1,0 +1,18 @@
+{% extends "blog/home.html" %}
+
+{% block content %}
+    <h1>Список статей</h1>
+    <table>
+    <ul>
+    {% for post in object_list %}
+        <tr>
+        <td><li></td>
+            <td><a href="{% url 'post_detail' post.id %}"> {{ post.title }}</a></td>
+            <td><a href="{% url 'delete-item' post.id %}"<br><button type="submit" class="save btn btn-default">Удалить</button> <br> </a></td>
+            <td><a href="{% url 'post_update' post.id %}"<br><button type="submit" class="save btn btn-default">Изменить</button> <br> </a></td>
+        <td></li></td>
+        </tr>
+    {% endfor %}
+    </ul>
+    </table>
+{% endblock %}

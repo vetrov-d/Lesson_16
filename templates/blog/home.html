@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог ДВ</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+{% block mainmenu %}
+    <a href="{% url 'about' %}">Обо мне</a>
+    <a href="{% url 'post_list' %}">Список постов</a>
+    <a href="{% url 'post_create' %}">Добавить пост</a>
+    <a href="{% url 'home' %}">Главная</a>
+{% endblock mainmenu %}
+
+{% block content %}
+
+{% endblock %}
+    <footer>
+        <p>© 2025 My Blog</p>
+    </footer>
+</body>
+</html>
